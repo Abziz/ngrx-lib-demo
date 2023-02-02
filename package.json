@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng build store-counter && ng serve",
-    "build": "ng build store-counter && ng build",
-    "watch": "ng build store-counter && ng build --watch --configuration development",
+    "start": "ng build store-counter && ng serve store-app",
+    "build": "ng build store-counter && ng build store-app",
+    "watch": "ng build store-counter && ng build --watch --configuration development store-app",
     "test": "ng build store-counter && ng test"
   },
   "private": true,
