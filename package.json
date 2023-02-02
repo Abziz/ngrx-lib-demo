@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "railway:serve":"node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng serve store-app --configuration production --port=$PORT",
-    "railway:build":"node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build store-counter",
+    "ng-high-mem": "node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng",
+    "http-server": "angular-http-server --path=dist/store-app --silent -p $PORT",
+    "high-mem-build": "npm run ng-high-mem build store-counter && npm run ng-high-mem build store-app",
     "start": "ng serve",
     "build": "ng build store-counter && ng build  store-app",
     "watch": "ng build store-counter && ng build --watch --configuration development store-app",
@@ -21,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "@ngrx/store": "^14.3.3",
+    "angular-http-server": "^1.11.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
