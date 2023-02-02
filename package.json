@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng build store-counter && ng serve store-app",
-    "build": "node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build store-counter && node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build store-app",
+    "railway:serve":"ng serve store-app --configuration production --port=$PORT",
+    "railway:build":"node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build store-counter",
+    "start": "ng serve",
+    "build": "ng build store-counter && ng build  store-app",
     "watch": "ng build store-counter && ng build --watch --configuration development store-app",
     "test": "ng build store-counter && ng test"
   },
