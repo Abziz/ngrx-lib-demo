@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "railway:serve":"ng serve store-app --configuration production --port=$PORT",
+    "railway:serve":"node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng serve store-app --configuration production --port=$PORT",
     "railway:build":"node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build store-counter",
     "start": "ng serve",
     "build": "ng build store-counter && ng build  store-app",
