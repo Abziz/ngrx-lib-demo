@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng build store-counter && ng serve store-app",
-    "build": "ng build store-counter && ng build store-app",
+    "build": "node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build store-counter && node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build store-app",
     "watch": "ng build store-counter && ng build --watch --configuration development store-app",
     "test": "ng build store-counter && ng test"
   },
